@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Changelog-collector</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      {{ nav }}
+    </div>
+
+    <div class="content">
+      <div class="dependency-name">
+        {{ changelog.name }}
+      
+        <div class="dependency-version dependency-version-{{ changelog.version.type }}">
+          <span class="current-version">{{ changelog.version.current }}</span> > <span class="target-version">{{ changelog.version.target }}</span>
+        </div>
+      </div>
+
+      <a href="{{ changelog.url }}" target="_blank">{{ changelog.url }}</a>
+      
+      <hr/>
+
+      {{ changelog.content }}
+    </div>
+  </div>
+</body>
+
+</html>
+

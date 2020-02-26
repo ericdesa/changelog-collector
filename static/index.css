@@ -1,0 +1,146 @@
+body, html {
+  height: 100%;
+  color: #1a202c;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+/* =================== */
+
+.sidebar {
+  flex-shrink: 0;
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  overflow: auto;
+  background-color: #f6f8fa;
+  border-right: 1px solid #e2e8f0;
+  box-shadow: #e2e8f0 0 0 8px;
+  padding-bottom: 4em;
+}
+
+.sidebar-item, .sidebar-item:visited {
+  display: block;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.5em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-item.selected {
+  background: white;
+  position: relative;
+}
+
+.sidebar-item.selected:after {
+  content: "";
+}
+
+.sidebar-item .dependency-name {
+  font-weight: 600;
+}
+
+
+/* content */
+/* =================== */
+
+.content .dependency-name {
+  font-size: 2em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.content .dependency-name .dependency-version {
+  margin-left: 0.5rem;
+}
+
+.content {
+  width: 100%;
+  max-width: 900px;
+  padding: 0.5em 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code {
+  font-family: FMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  background-color: #f6f8fa;
+  padding: 0 0.25em;
+  font-size: 0.875em;
+  line-height: 1.45;
+  border-radius: 0.5em;
+}
+
+pre.code {
+  background-color: #f6f8fa;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+pre.code code {
+  padding: 0;
+}
+
+h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef
+}
+
+
+/* dependency-version */
+/* =================== */
+
+.dependency-version {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  color: #2f2f2f;
+}
+
+.target-version {
+  font-weight: 600;
+}
+
+.dependency-version-unknow {
+  background-color: #dadada;
+}
+
+.dependency-version-fix {
+  background-color: #69f0ae;
+}
+
+.dependency-version-minor {
+  background-color: #ffce2d;
+}
+
+.dependency-version-major {
+  background-color: #f04e4e;
+}
+
+
+/* common */
+/* =================== */
+
+a, a:visited {
+  color: #0366d6;
+  text-decoration: none;
+}
+hr {
+  height: 1px;
+  padding: 0;
+  color: #eaecef;
+  background-color: #eaecef;
+  border: 0;
+  margin: 1em 0;
+}

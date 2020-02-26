@@ -1,0 +1,10 @@
+    
+<a id="{{ changelog.id }}" href="{{ changelog.filename }}#{{ changelog.id }}" class="sidebar-item {{ selectedClass }}">
+  <div class="dependency-name">
+    {{ changelog.name }}
+  </div>
+
+  <div class="dependency-version dependency-version-{{ changelog.version.type }}">
+    <span class="current-version">{{ changelog.version.current }}</span> > <span class="target-version">{{ changelog.version.target }}</span>
+  </div>
+</a>
