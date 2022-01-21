@@ -294,16 +294,23 @@ function formatChangelog(
   };
 }
 
-function getUpgradeType(currentVersion = '', targetVersion = '') {
-  const currentVersionComponents = currentVersion.split('.');
-  const targetVersionComponents = targetVersion.split('.');
-  if (currentVersionComponents.length === 3 && targetVersionComponents.length === 3) {
-    if (targetVersionComponents[0] > currentVersionComponents[0]) return 'major';
-    else if (targetVersionComponents[1] > currentVersionComponents[2]) return 'minor';
-    else return 'fix';
-  } else {
-    return 'unknow';
+function getUpgradeType(currentVersion = "", targetVersion = "") {
+  const currentVersionComponents = currentVersion.split(".");
+  const targetVersionComponents = targetVersion.split(".");
+
+  function compare(i) {
+    return (
+      currentVersionComponents.length >= i + 1 &&
+      targetVersionComponents.length >= i + 1 &&
+      +targetVersionComponents[i] > +currentVersionComponents[i]
+    );
   }
+
+  if (currentVersion === targetVersion) return "latest";
+  else if (compare(0)) return "major";
+  else if (compare(1)) return "minor";
+  else if (compare(2)) return "fix";
+  else return "unknow";
 }
 
 function writeFiles(allChangelogList) {

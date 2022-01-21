@@ -112,8 +112,17 @@ h2 {
   font-weight: 600;
 }
 
-.dependency-version-unknow {
+.dependency-version-latest {
   background-color: #dadada;
+}
+
+.dependency-version-latest .target-version {
+  font-weight: normal;
+}
+
+.dependency-version-unknow {
+  background-color: #2f2f2f;
+  color: white;
 }
 
 .dependency-version-fix {
