@@ -4,6 +4,7 @@
 
 ### Chore
 
+- await / async refactor
 - upgrade request: 2.88.0 > 2.88.2
 - upgrade rimraf: 3.0.0 > 3.0.2
 - upgrade showdown": 1.9.0 > 1.9.1
