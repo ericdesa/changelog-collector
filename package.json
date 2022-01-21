@@ -1,6 +1,6 @@
 {
   "name": "changelog-collector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collect all changelogs from your outdated dependencies.",
   "author": "Eric De Sa",
   "license": "UNLICENSED",
@@ -9,9 +9,9 @@
     "changelog-collector": "./index.js"
   },
   "dependencies": {
-    "request": "^2.88.0",
-    "rimraf": "^3.0.0",
-    "showdown": "^1.9.0"
+    "request": "^2.88.2",
+    "rimraf": "^3.0.2",
+    "showdown": "^1.9.1"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "url": "https://github.com/ericdesa/changelog-collector/issues"
   },
   "homepage": "https://github.com/ericdesa/changelog-collector#readme",
-  "engines" : { 
-    "node" : ">=10.12.0"
+  "engines": {
+    "node": ">=10.12.0"
   }
 }
