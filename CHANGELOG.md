@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.1 (21-01-2022)
+## 1.1.0 (21-01-2022)
 
 - add a color to identity the dependencies with unknow status
 - await / async refactor
