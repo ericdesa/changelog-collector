@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 (21-01-2022)
+
+- fix an error when a repository is not hosted by github
+
 ## 1.1.0 (21-01-2022)
 
 - add a color to identity the dependencies with unknow status

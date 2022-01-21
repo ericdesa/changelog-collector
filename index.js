@@ -97,7 +97,8 @@ async function getRegistryInfos(
         res.statusCode < 300 &&
         json &&
         json["repository"] &&
-        json["repository"]["url"]
+        json["repository"]["url"] &&
+        json["repository"]["url"].match(".*(github.com.*).git")
       ) {
         resolve({
           repoUrl: `https://${
